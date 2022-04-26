@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(inicio,home)">
+	<title th:text="home"></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css}">
+  <link th:href="@{https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css}" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css}">
+  <link rel="stylesheet" th:href="@{/css/} + empleado + .css">
+    <script th:src="@{https://cdn.jsdelivr.net/npm/sweetalert2@9}"></script>
+    
+    <script>
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            timer: 2000
+        });
+    </script>
+</head>
+<body>
+
+    <div style="text-align: center;">
+        <h1> Prueba tecnica Activos</h1>
+
+        <form style="display: inline-grid;">
+            <label>Nombre</label>
+            <input id="_nombre" type="text" name="nombre" value=/>
+
+            <label>Apellido</label>
+            <input id="_apellido" type="text" name="apellido"/>
+
+            <label>Telefono</label>
+            <input id="_telefono" type="phone" name="telefono"/>
+
+            <label>Correo</label>
+            <input id="_correo" type="email" name="correo"/>
+
+            <label>Fecha de nacimiento</label>
+            <input id="_fechaNacimiento" type="text" name="fechaNacimiento"/>
+
+            <label>Tipo de Documento</label>
+            <input id="_tipoDocumento" type="text" name="tipoDocumento"/>
+
+            <label>Documento</label>
+            <input id="_documento" type="number" name="documento"/>
+
+            <label>Dirección</label>
+            <input id="_direccion" type="text" name="direccion"/>
+            
+            <button style="margin-top: 10px;" id="btn-insert"> Insertar </button>
+        </form>
+        
+        <h1> Buscar Empleados </h1>
+        <input type="text" name="buscarEmpleado"/>
+        <button id="btn-buscar" > Buscar </button>
+        
+    </div>
+    
+</body>
+<script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js}"></script>
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js}"></script>
+<script th:src="@{https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js}"></script>
+</html>
